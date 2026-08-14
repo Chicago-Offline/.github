@@ -16,7 +16,28 @@ rediscover it.
   library of known channel plans, repeaters, DMR talkgroups, antenna systems.
 - **chioff-ssrf-shared** — SSRF-Lite overlay for the Chicago Offline community
   nets (GMRS/MURS).
-  
+
+#### How the codeplug pipeline fits together
+
+```mermaid
+flowchart LR
+    SSRF["ssrf-lite<br/><i>what's on the air</i><br/>channel plans, repeaters,<br/>talkgroups"]
+    OVER["chioff-ssrf-shared<br/><i>local overlay</i><br/>Chicago GMRS/MURS nets"]
+    PROF["profiles<br/><i>what this operator wants</i><br/>zones, scan lists, priorities"]
+    CP{{"codeplugger<br/><i>generator</i>"}}
+    CPS["CPS import files<br/>NeonPlug · qdmr · dmrconfig"]
+    FLEET["radio fleet<br/>DM-32UV · MateTalk P4 · BF-888"]
+
+    SSRF --> OVER
+    OVER --> CP
+    PROF --> CP
+    CP --> CPS
+    CPS --> FLEET
+```
+
+Spectrum data and operator intent stay in separate repos, so the same RF facts
+feed every radio and a profile change never means re-describing the band plan.
+
 ### Radio Reverse Engineering
 - **dm32-info** — Baofeng DM-32UV reference: specs, programming tools, firmware
   version tracking.
