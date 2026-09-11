@@ -16,6 +16,10 @@ rediscover it.
   library of known channel plans, repeaters, DMR talkgroups, antenna systems.
 - **chioff-ssrf-shared** — SSRF-Lite overlay for the Chicago Offline community
   nets (GMRS/MURS).
+- **chioff-codeplugger-profiles-shared** — Shared codeplugger profiles for the
+  community nets (pairs with `chioff-ssrf-shared`).
+- **chioff-codeplugger-profiles-test** — Public reference profiles and CI
+  fixtures exercising the codeplugger pipeline end to end.
 
 #### How the codeplug pipeline fits together
 
@@ -47,7 +51,7 @@ feed every radio and a profile change never means re-describing the band plan.
 - **p64tool** — fork of an opensource p64tool, adding support for the MateTalk P4
 
 ### Mesh
-- **emuehlstein/meshcore** — A meshcore release preconfigured with mqtt reporting
+- **emuehlstein/MeshCore** — A meshcore release preconfigured with mqtt reporting
   and chicagoland radio settings
 - **emuehlstein/chioff-rns** - An rns server deployed to AWS via code
 
