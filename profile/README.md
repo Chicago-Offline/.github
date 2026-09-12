@@ -10,16 +10,23 @@ rediscover it.
 ## Projects
 
 ### Codeplugs & RF Data
-- **codeplugger** — Codeplug generator. SSRF-Lite data + a profile → importable
-  files for NeonPlug, qdmr, dmrconfig, and friends.
-- **ssrf-lite** — YAML spec for describing spectrum resources, plus a data
-  library of known channel plans, repeaters, DMR talkgroups, antenna systems.
-- **chioff-ssrf-shared** — SSRF-Lite overlay for the Chicago Offline community
-  nets (GMRS/MURS).
-- **chioff-codeplugger-profiles-shared** — Shared codeplugger profiles for the
-  community nets (pairs with `chioff-ssrf-shared`).
-- **chioff-codeplugger-profiles-test** — Public reference profiles and CI
-  fixtures exercising the codeplugger pipeline end to end.
+- **[codeplugger](https://github.com/Chicago-Offline/codeplugger)** — Codeplug
+  compiler. SSRF-Lite data + a profile → a validated, radio-neutral codeplug,
+  exported for CHIRP / qdmr / p64tool or written straight to the radio.
+  **[→ Site](https://chicago-offline.github.io/codeplugger/)**
+- **[ssrf-lite](https://github.com/Chicago-Offline/ssrf-lite)** — YAML spec for
+  describing spectrum resources, plus a data library of known channel plans,
+  repeaters, DMR talkgroups, antenna systems.
+  **[→ Browse the data](https://chicago-offline.github.io/ssrf-lite/)**
+- **[chioff-ssrf-shared](https://github.com/Chicago-Offline/chioff-ssrf-shared)**
+  — SSRF-Lite overlay for the Chicago Offline community nets (GMRS/MURS).
+- **[chioff-codeplugger-profiles-shared](https://github.com/Chicago-Offline/chioff-codeplugger-profiles-shared)**
+  — Shared codeplugger profiles for the community nets (pairs with
+  `chioff-ssrf-shared`), plus the shared radio fleet and its verified snapshots.
+  **[→ Site](https://chicago-offline.github.io/chioff-codeplugger-profiles-shared/)**
+- **[chioff-codeplugger-profiles-test](https://github.com/Chicago-Offline/chioff-codeplugger-profiles-test)**
+  — Public reference profiles and CI fixtures exercising the codeplugger
+  pipeline end to end.
 
 #### How the codeplug pipeline fits together
 
